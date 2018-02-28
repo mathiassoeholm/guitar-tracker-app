@@ -4,10 +4,13 @@ import { StyleSheet, Text, View } from 'react-native';
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+      // Try removing the `flex: 1` on the parent View.
+      // The parent will not have dimensions, so the children can't expand.
+      // What if you add `height: 300` instead of `flex: 1`?
+      <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'stretch'}}>
+        <View style={{width: 40, backgroundColor: 'powderblue'}} />
+        <View style={{width: 40, backgroundColor: 'skyblue'}} />
+        <View style={{width: 40, backgroundColor: 'steelblue'}} />
       </View>
     );
   }
