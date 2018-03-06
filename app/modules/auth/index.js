@@ -1,8 +1,15 @@
-import * as actions from './authActions';
-import * as constants from './authConstants';
-import * as actionTypes from './authActionTypes';
-import reducer from './authReducer';
+import * as authActions from './authActions';
+import * as authConstants from './authConstants';
+import * as authActionTypes from './authActionTypes';
+import authReducer from './authReducer';
 
 import * as theme from '../../styles/theme';
 
-export { actions, constants, actionTypes, reducer, theme };
+export
+{
+    authActions,
+    authConstants,
+    authActionTypes,
+    authReducer,
+    theme
+};
