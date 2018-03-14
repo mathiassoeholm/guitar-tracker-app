@@ -1,4 +1,4 @@
-import { Dimensions, Platform } from 'react-native';
+import { Dimensions, Platform, StyleSheet } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 const realWidth = height > width ? width : height;
@@ -23,7 +23,8 @@ const fontSize =
 {
     small: normalize(14),
     regular: normalize(15),
-    large: normalize(22)
+    large: normalize(22),
+    title: normalize(40)
 }
 
 const fontFamily =
@@ -39,10 +40,13 @@ const navbarHeight = (Platform.OS === 'ios') ? 64 : 54;
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const tabColor = (Platform.OS === "ios") ? "rgb(207,217,233)" : "rgba(255,255,255,.8)";
-const selectedTabColor = (Platform.OS === "ios") ? "rgb(99,139,250)" : "#fff";
 
-const tabIconStyle = { size: 25, color: tabColor, selected: selectedTabColor }
+const titleStyle = 
+{
+    fontSize: fontSize.title,
+    textAlign: 'center',
+    paddingTop: 10
+}
 
 export
 {
@@ -53,6 +57,6 @@ export
     navbarHeight,
     windowWidth,
     windowHeight,
-    tabIconStyle,
-    normalize
+    normalize,
+    titleStyle
 }
