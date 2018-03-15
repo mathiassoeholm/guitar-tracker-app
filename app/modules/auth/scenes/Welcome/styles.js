@@ -3,19 +3,16 @@ import { fontSize, titleStyle, roundedButtonStyle } from  '../../../../../styles
 
 export default StyleSheet.create(
 {
-    container:
-    {
-        flex: 1,
-        alignItems: 'center'
-    },
+	container:
+	{
+		flex: 1,
+		alignItems: 'center'
+	},
 
-    title: titleStyle,
-
-    image:
-    {
-		padding: 20,
-		width: 200,
-		height: 200
+	title:
+	{
+		...titleStyle,
+		paddingTop: 30
 	},
 
 	buttonContainer:
@@ -29,7 +26,6 @@ export default StyleSheet.create(
 	{
 		...roundedButtonStyle,
 		backgroundColor: 'red',
-		margin: 10,
-		textAlign: 'center'
+		margin: 10
 	}
 });

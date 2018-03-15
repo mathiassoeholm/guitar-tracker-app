@@ -13,7 +13,7 @@ const Welcome = () =>
           Guitar Tracker
         </Text>
         <SvgUri
-          style={styles.image}
+          style={{padding: 30}}
           width="200"
           height="200"
           svgXmlData={svg.guitar}

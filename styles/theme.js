@@ -24,15 +24,16 @@ const fontSize =
     small: normalize(14),
     regular: normalize(15),
     large: normalize(22),
-    title: normalize(40)
+    title: normalize(35)
 }
 
 const fontFamily =
 {
-    bold: "RobotoBold",
-    medium: "RobotoMedium",
-    regular: "RobotoRegular",
-    light: "RobotoLight",
+    bold: 'RobotoBold',
+    medium: 'RobotoMedium',
+    regular: 'RobotoRegular',
+	light: 'RobotoLight',
+	title: 'Mermaid'
 }
 
 const padding = 8;
@@ -43,9 +44,15 @@ const windowHeight = Dimensions.get('window').height;
 
 const titleStyle = 
 {
-    fontSize: fontSize.title,
+	fontSize: fontSize.title,
+	fontFamily: fontFamily.title,
     textAlign: 'center',
     paddingTop: 10
+}
+
+const containerStyle = 
+{
+	flex: 1
 }
 
 const roundedButtonStyle =
@@ -66,5 +73,6 @@ export
     windowHeight,
     normalize,
 	titleStyle,
+	containerStyle,
 	roundedButtonStyle
 }
