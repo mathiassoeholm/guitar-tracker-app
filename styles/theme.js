@@ -48,6 +48,13 @@ const titleStyle =
     paddingTop: 10
 }
 
+const roundedButtonStyle =
+{
+	borderRadius: 30,
+	width: Math.min(380, windowWidth - 30),
+	height: 60
+}
+
 export
 {
     color,
@@ -58,5 +65,6 @@ export
     windowWidth,
     windowHeight,
     normalize,
-    titleStyle
+	titleStyle,
+	roundedButtonStyle
 }

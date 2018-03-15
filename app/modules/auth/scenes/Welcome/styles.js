@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { fontSize, titleStyle } from  '../../../../../styles/theme';
+import { fontSize, titleStyle, roundedButtonStyle } from  '../../../../../styles/theme';
 
 export default StyleSheet.create(
 {
@@ -13,6 +13,23 @@ export default StyleSheet.create(
 
     image:
     {
-        padding: 20
-    }
+		padding: 20,
+		width: 200,
+		height: 200
+	},
+
+	buttonContainer:
+	{
+		marginTop: 50,
+		flex: 1,
+		justifyContent: 'flex-start'
+	},
+
+	button:
+	{
+		...roundedButtonStyle,
+		backgroundColor: 'red',
+		margin: 10,
+		textAlign: 'center'
+	}
 });
