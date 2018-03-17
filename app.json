@@ -1,5 +1,15 @@
 {
-  "expo": {
-    "sdkVersion": "25.0.0"
+	"expo": {
+	 "name": "Guitar Tracker",
+	 "icon": "./app/assets/images/icon.png",
+	 "version": "1.0.0",
+	 "slug": "guitar-tracker",
+	 "sdkVersion": "25.0.0",
+	 "ios": {
+	   "bundleIdentifier": "com.mathiassoeholm.guitartracker"
+	 },
+	 "android": {
+	   "package": "com.mathiassoeholm.guitartracker"
+	 }
+	}
   }
-}
