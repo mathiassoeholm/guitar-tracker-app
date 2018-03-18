@@ -25,7 +25,7 @@ export default StyleSheet.create(
 	button:
 	{
 		...roundedButtonStyle,
-		backgroundColor: 'red',
+		backgroundColor: 'blue',
 		margin: 10
 	}
 });
