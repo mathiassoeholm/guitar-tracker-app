@@ -1,9 +1,14 @@
 {
-  "extends": ["airbnb"],
-  "rules":
-  {
-	"indent": ["error", "tab"],
-	"no-tabs": "off",
-	"brace-style": ["error", "allman"]
-  }
+	"extends": ["airbnb"],
+	"env":
+	{
+		"es6": true
+	},
+	"parser": "babel-eslint",
+	"rules":
+	{
+		"indent": ["error", "tab"],
+		"no-tabs": "off",
+		"brace-style": ["error", "allman"]
+	}
 }
