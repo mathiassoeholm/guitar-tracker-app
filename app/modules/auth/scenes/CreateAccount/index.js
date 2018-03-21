@@ -6,7 +6,7 @@ import styles from './styles';
 import theme from '../../../../../styles/theme';
 import svg from '../../../../assets/images/svg';
 
-const Welcome = () =>
+const CreateAccount = () =>
 {
 	// Calculate size of image
 	const minButtonContainerHeight = 300;
@@ -20,7 +20,7 @@ const Welcome = () =>
     return (
       <View style={styles.container}>
 		<Text style={styles.title}>
-		Guitar Tracker
+		Create Account
 		</Text>
         <SvgUri
           width={(imageSize).toString()}
@@ -42,4 +42,4 @@ const Welcome = () =>
       </View>);
 };
 
-export default Welcome;
+export default CreateAccount;
