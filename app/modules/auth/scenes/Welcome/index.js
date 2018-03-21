@@ -1,12 +1,13 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import SvgUri from 'react-native-svg-uri';
 
 import styles from './styles';
 import theme from '../../../../../styles/theme';
 import svg from '../../../../assets/images/svg';
 import authActions from '../../actions';
+import Button from '../../../../components/Button';
 
 const Welcome = ({ navigate }) =>
 {
@@ -28,19 +29,8 @@ const Welcome = ({ navigate }) =>
           svgXmlData={svg.guitar}
         />
         <View style={styles.buttonContainer}>
-          <TouchableOpacity
-				style={styles.button}
-				onPress={() => navigate('CreateAccount')}
-			>
-            <Text style={theme.buttonTextStyle}>
-              CREATE ACCOUNT
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.signInButton}>
-            <Text style={theme.buttonTextStyle}>
-              SIGN IN
-            </Text>
-          </TouchableOpacity>
+			<Button text="CREATE ACCOUNT" style={styles.createButton}/>
+          	<Button text="LOGIN" style={styles.signInButton}/>
         </View>
       </View>);
 };

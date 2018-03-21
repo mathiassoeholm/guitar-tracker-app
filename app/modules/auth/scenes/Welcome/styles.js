@@ -19,18 +19,16 @@ export default StyleSheet.create(
 	{
 		marginTop: 50,
 		flex: 1,
-		justifyContent: 'flex-start'
+		justifyContent: 'center'
 	},
 
-	button:
+	createButton:
 	{
-		...theme.roundedButtonStyle,
 		margin: 10
 	},
 
 	signInButton:
 	{
-		...theme.roundedButtonStyle,
 		margin: 10,
 		backgroundColor: theme.color.accent,
 	},

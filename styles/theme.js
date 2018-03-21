@@ -1,4 +1,4 @@
-import { Dimensions, Platform, StyleSheet } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 
 const color =
 {
@@ -7,16 +7,15 @@ const color =
 	darkText: '#343434',
 	lightText: 'white',
 	button: '#657fac',
-    accent: '#e57957',
-}
+	accent: '#e57957',
+};
 
 const fontSize =
 {
-    small: 14,
-    regular: 15,
-    large: 22,
+	small: 14,
+	regular: 15,
+	large: 22,
 	title: 35,
-	button: 20,
 }
 
 const fontFamily =
@@ -39,7 +38,7 @@ const titleStyle =
 	color: color.darkText,
 	fontSize: fontSize.title,
 	fontFamily: fontFamily.title,
-    textAlign: 'center',
+	textAlign: 'center',
 	paddingTop: 10,
 	paddingBottom: 20,
 }
@@ -78,6 +77,4 @@ export default
     windowHeight,
 	titleStyle,
 	containerStyle,
-	roundedButtonStyle,
-	buttonTextStyle,
 }
