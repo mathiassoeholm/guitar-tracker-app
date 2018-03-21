@@ -3,17 +3,17 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import SvgUri from 'react-native-svg-uri';
 
 import styles from './styles';
-import { windowWidth, windowHeight } from '../../../../../styles/theme';
+import theme from '../../../../../styles/theme';
 import svg from '../../../../assets/images/svg';
 
 const Welcome = () =>
 {
 	// Calculate size of image
-	const minButtonContainerHeight = 400;
+	const minButtonContainerHeight = 300;
 	const titleStyle = StyleSheet.flatten(styles.title);
 	const imageSize = Math.min(
-		windowWidth,
-		windowHeight - (titleStyle.fontSize + titleStyle.paddingTop) - minButtonContainerHeight);
+		theme.windowWidth,
+		theme.windowHeight - (titleStyle.fontSize + titleStyle.paddingTop +  titleStyle.paddingBottom) - minButtonContainerHeight);
 
 	console.log(imageSize);
 
@@ -29,13 +29,13 @@ const Welcome = () =>
         />
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button}>
-            <Text>
-              Test
+            <Text style={theme.buttonTextStyle}>
+              CREATE ACCOUNT
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text>
-              Test
+          <TouchableOpacity style={styles.signInButton}>
+            <Text style={theme.buttonTextStyle}>
+              SIGN IN
             </Text>
           </TouchableOpacity>
         </View>

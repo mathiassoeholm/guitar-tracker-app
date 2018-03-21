@@ -10,13 +10,12 @@ const normalize = (fontSize) =>
 
 const color =
 {
-    black: "rgba(0,0,0,.84)",
-    light_black: "#414141",
-    main: "rgb(99,139,250)",
-    white: "#ffffff",
-    light_grey: "#eaeaea",
-    grey: "#ccc",
-    red: "red"
+	lightBackground: 'white',
+	darkBackground: '#8da4cd',
+	darkText: '#343434',
+	lightText: 'white',
+	button: '#657fac',
+    accent: '#e57957',
 }
 
 const fontSize =
@@ -24,7 +23,8 @@ const fontSize =
     small: normalize(14),
     regular: normalize(15),
     large: normalize(22),
-    title: normalize(35)
+	title: normalize(35),
+	button: normalize(20),
 }
 
 const fontFamily =
@@ -33,7 +33,7 @@ const fontFamily =
     medium: 'RobotoMedium',
     regular: 'RobotoRegular',
 	light: 'RobotoLight',
-	title: 'Mermaid'
+	title: 'Mermaid',
 }
 
 const padding = 8;
@@ -44,25 +44,38 @@ const windowHeight = Dimensions.get('window').height;
 
 const titleStyle = 
 {
+	color: color.darkText,
 	fontSize: fontSize.title,
 	fontFamily: fontFamily.title,
     textAlign: 'center',
-    paddingTop: 10
+	paddingTop: 10,
+	paddingBottom: 20,
 }
 
 const containerStyle = 
 {
-	flex: 1
+	flex: 1,
+	backgroundColor: color.lightBackground
 }
 
 const roundedButtonStyle =
 {
+	backgroundColor: color.button,
 	borderRadius: 30,
 	width: Math.min(380, windowWidth - 30),
-	height: 60
+	height: 60,
+	justifyContent: 'center'
 }
 
-export
+const buttonTextStyle =
+{
+	textAlign: 'center',
+	fontSize: fontSize.button,
+	color: color.lightText,
+	fontWeight: 'bold'
+}
+
+export default
 {
     color,
     fontSize,
@@ -74,5 +87,6 @@ export
     normalize,
 	titleStyle,
 	containerStyle,
-	roundedButtonStyle
+	roundedButtonStyle,
+	buttonTextStyle,
 }

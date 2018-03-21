@@ -3,7 +3,7 @@ import { Font } from 'expo';
 import { SafeAreaView } from 'react-navigation';
 
 import AppRoot from './app/AppRoot';
-import { containerStyle } from './styles/theme';
+import theme from './styles/theme';
 
 // Apparently this needs to be a class otherwise hot reloading breaks
 // Issue: https://github.com/facebook/react-native/issues/10991
@@ -26,7 +26,7 @@ export default class App extends React.Component
 	render()
 	{
 		return (
-			<SafeAreaView style={containerStyle}>
+			<SafeAreaView style={theme.containerStyle}>
 				{this.state.fontLoaded && <AppRoot/>}
 			</SafeAreaView>
 		);

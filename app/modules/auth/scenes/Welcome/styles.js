@@ -1,17 +1,17 @@
 import { StyleSheet } from 'react-native';
-import { fontSize, titleStyle, roundedButtonStyle } from  '../../../../../styles/theme';
+import theme from  '../../../../../styles/theme';
 
 export default StyleSheet.create(
 {
 	container:
 	{
-		flex: 1,
+		...theme.containerStyle,
 		alignItems: 'center'
 	},
 
 	title:
 	{
-		...titleStyle,
+		...theme.titleStyle,
 		paddingTop: 30
 	},
 
@@ -24,8 +24,14 @@ export default StyleSheet.create(
 
 	button:
 	{
-		...roundedButtonStyle,
-		backgroundColor: 'blue',
+		...theme.roundedButtonStyle,
 		margin: 10
-	}
+	},
+
+	signInButton:
+	{
+		...theme.roundedButtonStyle,
+		margin: 10,
+		backgroundColor: theme.color.accent,
+	},
 });
