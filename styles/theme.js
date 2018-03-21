@@ -1,13 +1,5 @@
 import { Dimensions, Platform, StyleSheet } from 'react-native';
 
-const { width, height } = Dimensions.get('window');
-const realWidth = height > width ? width : height;
-
-const normalize = (fontSize) =>
-{
-    return Math.round(fontSize * realWidth / 375);
-}
-
 const color =
 {
 	lightBackground: 'white',
@@ -20,11 +12,11 @@ const color =
 
 const fontSize =
 {
-    small: normalize(14),
-    regular: normalize(15),
-    large: normalize(22),
-	title: normalize(35),
-	button: normalize(20),
+    small: 14,
+    regular: 15,
+    large: 22,
+	title: 35,
+	button: 20,
 }
 
 const fontFamily =
@@ -84,7 +76,6 @@ export default
     navbarHeight,
     windowWidth,
     windowHeight,
-    normalize,
 	titleStyle,
 	containerStyle,
 	roundedButtonStyle,
