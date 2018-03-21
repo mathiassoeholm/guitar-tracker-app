@@ -7,6 +7,8 @@ import NavigationStack from './app/modules/navigation/NavigationStack';
 import theme from './styles/theme';
 import reduxStore from './app/redux/store';
 
+const mermaidFont = require('./app/assets/fonts/Mermaid.ttf');
+
 // Apparently this needs to be a class otherwise hot reloading breaks
 // Issue: https://github.com/facebook/react-native/issues/10991
 export default class App extends React.Component
@@ -19,9 +21,11 @@ export default class App extends React.Component
 	async componentDidMount()
 	{
 		await Font.loadAsync({
-			'Mermaid': require('./app/assets/fonts/Mermaid.ttf'),
+			Mermaid: mermaidFont,
 		});
 
+		// We purposefully trigger a re-render
+		// eslint-disable-next-line react/no-did-mount-set-state
 		this.setState({ fontLoaded: true });
 	}
 

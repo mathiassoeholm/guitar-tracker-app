@@ -9,6 +9,8 @@
 	{
 		"indent": ["error", "tab"],
 		"no-tabs": "off",
-		"brace-style": ["error", "allman"]
+		"brace-style": ["error", "allman"],
+		"react/jsx-indent": ["error", "tab"],
+		"react/jsx-filename-extension": "off"
 	}
 }
