@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import SvgUri from 'react-native-svg-uri';
+import PropTypes from 'prop-types';
 
 import styles from './styles';
 import theme from '../../../../../styles/theme';
@@ -33,6 +34,11 @@ const Welcome = ({ navigate }) =>
           	<Button text="LOGIN" style={styles.signInButton}/>
         </View>
       </View>);
+};
+
+Welcome.propTypes =
+{
+	navigate: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) =>

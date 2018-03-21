@@ -55,7 +55,7 @@ const roundedButtonStyle =
 	borderRadius: 30,
 	width: Math.min(380, windowWidth - 30),
 	height: 60,
-	justifyContent: 'center'
+	justifyContent: 'center',
 }
 
 const buttonTextStyle =
@@ -63,18 +63,18 @@ const buttonTextStyle =
 	textAlign: 'center',
 	fontSize: fontSize.button,
 	color: color.lightText,
-	fontWeight: 'bold'
+	fontWeight: 'bold',
 }
 
 export default
 {
-    color,
-    fontSize,
-    fontFamily,
-    padding,
-    navbarHeight,
-    windowWidth,
-    windowHeight,
+	color,
+	fontSize,
+	fontFamily,
+	padding,
+	navbarHeight,
+	windowWidth,
+	windowHeight,
 	titleStyle,
 	containerStyle,
-}
+};

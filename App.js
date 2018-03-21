@@ -32,9 +32,9 @@ export default class App extends React.Component
 	render()
 	{
 		return (
-			<Provider store = {reduxStore}>
+			<Provider store={reduxStore}>
 				<SafeAreaView style={theme.containerStyle}>
-					{this.state.fontLoaded && <NavigationStack/>}
+					{this.state.fontLoaded && <NavigationStack />}
 				</SafeAreaView>
 			</Provider>
 		);

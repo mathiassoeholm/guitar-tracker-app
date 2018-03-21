@@ -11,6 +11,7 @@
 		"no-tabs": "off",
 		"brace-style": ["error", "allman"],
 		"react/jsx-indent": ["error", "tab"],
-		"react/jsx-filename-extension": "off"
+		"react/jsx-filename-extension": "off",
+		"function-paren-newline": "off"
 	}
 }
