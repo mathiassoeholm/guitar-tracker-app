@@ -12,33 +12,37 @@ import Button from '../../../../components/Button';
 
 const Welcome = ({ navigate }) =>
 {
-	// Calculate size of image
-	const minButtonContainerHeight = 300;
-	const titleStyle = StyleSheet.flatten(styles.title);
-	const imageSize = Math.min(
-		theme.windowWidth,
-		theme.windowHeight - (titleStyle.fontSize + titleStyle.paddingTop +  titleStyle.paddingBottom) - minButtonContainerHeight);
+  // Calculate size of image
+  const minButtonContainerHeight = 300;
+  const titleStyle = StyleSheet.flatten(styles.title);
+  const imageSize = Math.min(
+    theme.windowWidth,
+    theme.windowHeight - (titleStyle.fontSize + titleStyle.paddingTop +  titleStyle.paddingBottom) - minButtonContainerHeight);
 
-    return (
-      <View style={styles.container}>
-		<Text style={styles.title}>
-		Guitar Tracker
-		</Text>
-        <SvgUri
-          width={(imageSize).toString()}
-          height={(imageSize).toString()}
-          svgXmlData={svg.guitar}
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>
+      Guitar Tracker
+      </Text>
+      <SvgUri
+        width={(imageSize).toString()}
+        height={(imageSize).toString()}
+        svgXmlData={svg.guitar}
+      />
+      <View style={styles.buttonContainer}>
+        <Button
+          text="CREATE ACCOUNT"
+          style={styles.createButton}
+          onPress={() => console.log('heyhey')}
         />
-        <View style={styles.buttonContainer}>
-			<Button text="CREATE ACCOUNT" style={styles.createButton}/>
-          	<Button text="LOGIN" style={styles.signInButton}/>
-        </View>
-      </View>);
+        <Button text="LOGIN" style={styles.signInButton} />
+      </View>
+    </View>);
 };
 
 Welcome.propTypes =
 {
-	navigate: PropTypes.func.isRequired,
+  navigate: PropTypes.func,
 };
 
 const mapDispatchToProps = (dispatch) =>

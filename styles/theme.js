@@ -43,8 +43,7 @@ const containerStyle = {
   backgroundColor: color.lightBackground,
 };
 
-export default
-{
+export default {
   color,
   fontSize,
   fontFamily,
