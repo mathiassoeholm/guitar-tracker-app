@@ -5,7 +5,7 @@ import SvgUri from 'react-native-svg-uri';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import theme from '../../../../../styles/theme';
+import theme from '../../../../styles/theme';
 import svg from '../../../../assets/images/svg';
 import authActions from '../../actions';
 import Button from '../../../../components/Button';

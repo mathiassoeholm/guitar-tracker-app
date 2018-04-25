@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-navigation';
 import { Provider } from 'react-redux';
 
 import NavigationStack from './app/modules/navigation/NavigationStack';
-import theme from './styles/theme';
+import theme from './app/styles/theme';
 import reduxStore from './app/redux/store';
 
 const mermaidFont = require('./app/assets/fonts/Mermaid.ttf');

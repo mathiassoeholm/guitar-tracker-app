@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import SvgUri from 'react-native-svg-uri';
 
 import styles from './styles';
-import theme from '../../../../../styles/theme';
+import theme from '../../../../styles/theme';
 import svg from '../../../../assets/images/svg';
 
 const CreateAccount = () =>
@@ -30,7 +30,7 @@ const CreateAccount = () =>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button}>
             <Text style={theme.buttonTextStyle}>
-              CREATE ACCOUNT
+              CREATE ACCOUNTS
             </Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.signInButton}>

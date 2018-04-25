@@ -8,6 +8,9 @@
 	"parser": "babel-eslint",
 	"rules":
 	{
-		"react/jsx-filename-extension": "off",
+    "react/jsx-filename-extension": "off",
+    "react/no-typos": "off",
+    "react/forbid-prop-types": "off",
+    "arrow-parens": "off"
 	}
 }
