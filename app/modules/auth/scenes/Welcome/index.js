@@ -47,7 +47,7 @@ Welcome.propTypes =
 
 const mapDispatchToProps = (dispatch) =>
 ({
-	onClickedButton: () => dispatch(authActions.login('username', 'password'))
+  onClickedButton: () => dispatch(authActions.login('username', 'password')),
 });
 
 export default connect(null, mapDispatchToProps)(Welcome);

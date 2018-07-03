@@ -1,15 +1,20 @@
 import firebase from 'firebase';
-import config from '../config';
-import authActions from '../modules/auth/actions';
+import config from '../../config';
+import authActions from '../auth/actions';
 
-const initialize = () => {
+const initialize = () =>
+{
   firebase.initializeApp(config.firebase);
 
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
+  firebase.auth().onAuthStateChanged((user) =>
+  {
+    if (user)
+    {
       // User is signed in
-      authActions.
-    } else {
+      authActions
+    }
+    else
+    {
       // User is signed out
       console.log('asdf');
     }
