@@ -11,6 +11,8 @@
     "react/jsx-filename-extension": "off",
     "react/no-typos": "off",
     "react/forbid-prop-types": "off",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "brace-style": ["error", "allman"],
+    "func-names": "off"
 	}
 }

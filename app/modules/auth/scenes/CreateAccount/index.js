@@ -8,20 +8,21 @@ import svg from '../../../../assets/images/svg';
 
 const CreateAccount = () =>
 {
-	// Calculate size of image
-	const minButtonContainerHeight = 300;
-	const titleStyle = StyleSheet.flatten(styles.title);
-	const imageSize = Math.min(
-		theme.windowWidth,
-		theme.windowHeight - (titleStyle.fontSize + titleStyle.paddingTop +  titleStyle.paddingBottom) - minButtonContainerHeight);
-
-	console.log(imageSize);
+  // Calculate size of image
+  const minButtonContainerHeight = 300;
+  const titleStyle = StyleSheet.flatten(styles.title);
+  const imageSize = Math.min(
+    theme.windowWidth,
+    theme.windowHeight -
+      (titleStyle.fontSize + titleStyle.paddingTop + titleStyle.paddingBottom) -
+      minButtonContainerHeight,
+  );
 
     return (
       <View style={styles.container}>
 		<Text style={styles.title}>
 		Create Account
-		</Text>
+    </Text>
         <SvgUri
           width={(imageSize).toString()}
           height={(imageSize).toString()}

@@ -14,13 +14,13 @@ const Button = ({ style, text }) => (
 
 Button.propTypes =
 {
-  style: PropTypes.object,
+  style: PropTypes.number,
   text: PropTypes.string.isRequired,
 };
 
 Button.defaultProps =
 {
-  style: {},
+  style: 0,
 };
 
 export default Button;

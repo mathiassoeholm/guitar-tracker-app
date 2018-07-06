@@ -5,7 +5,8 @@ import { Provider } from 'react-redux';
 
 import NavigationStack from './app/modules/navigation/NavigationStack';
 import theme from './app/styles/theme';
-import reduxStore from './app/redux/store';
+import firebaseBackend from './app/modules/backend/firebase-backend';
+import makeStore from './app/redux/store';
 
 const mermaidFont = require('./app/assets/fonts/Mermaid.ttf');
 
@@ -13,30 +14,32 @@ const mermaidFont = require('./app/assets/fonts/Mermaid.ttf');
 // Issue: https://github.com/facebook/react-native/issues/10991
 export default class App extends React.Component
 {
-	state =
-	{
-		fontLoaded: false,
-	};
+  state =
+  {
+    fontLoaded: false,
+  };
 
-	async componentDidMount()
-	{
-		await Font.loadAsync({
-			Mermaid: mermaidFont,
-		});
+  async componentDidMount()
+  {
+    await Font.loadAsync({
+      Mermaid: mermaidFont,
+    });
 
-		// We purposefully trigger a re-render
-		// eslint-disable-next-line react/no-did-mount-set-state
-		this.setState({ fontLoaded: true });
-	}
+    // We purposefully trigger a re-render
+    // eslint-disable-next-line react/no-did-mount-set-state
+    this.setState({ fontLoaded: true });
+  }
 
-	render()
-	{
-		return (
-			<Provider store={reduxStore}>
-				<SafeAreaView style={theme.containerStyle}>
-					{this.state.fontLoaded && <NavigationStack />}
-				</SafeAreaView>
-			</Provider>
-		);
-	}
+  store = makeStore(firebaseBackend);
+
+  render()
+  {
+    return (
+      <Provider store={this.store}>
+        <SafeAreaView style={theme.containerStyle}>
+          {this.state.fontLoaded && <NavigationStack />}
+        </SafeAreaView>
+      </Provider>
+    );
+  }
 }

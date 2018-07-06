@@ -1,25 +1,11 @@
 import firebase from 'firebase';
 import config from '../../config';
-import authActions from '../auth/actions';
 
 const initialize = () =>
-{
   firebase.initializeApp(config.firebase);
 
-  firebase.auth().onAuthStateChanged((user) =>
-  {
-    if (user)
-    {
-      // User is signed in
-      authActions
-    }
-    else
-    {
-      // User is signed out
-      console.log('asdf');
-    }
-  });
-};
+const setAuthStateChangedListener = (listener) =>
+  firebase.auth().onAuthStateChanged((user) => listener(user));
 
 const createUser = (email, password) =>
   firebase.auth().createUserWithEmailAndPassword(email, password);
@@ -30,6 +16,7 @@ const signIn = (email, password) =>
 export default
 {
   initialize,
+  setAuthStateChangedListener,
   createUser,
   signIn,
 };
