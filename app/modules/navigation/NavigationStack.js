@@ -1,8 +1,8 @@
 import { Platform, StatusBar } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-import Welcome from '../auth/scenes/Welcome';
-import CreateAccount from '../auth/scenes/CreateAccount';
+import Welcome from '../../components/Welcome';
+import CreateAccount from '../../components/CreateAccount';
 
 const NavigationStack = StackNavigator(
     {
