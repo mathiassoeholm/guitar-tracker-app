@@ -4,14 +4,14 @@
   "private": true,
   "devDependencies": {
     "babel-eslint": "^8.2.2",
-    "eslint": "^4.19.0",
-    "eslint-config-airbnb": "^16.1.0",
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "jest-expo": "25.0.0",
-    "react-native-scripts": "1.11.1",
-    "react-test-renderer": "16.2.0"
+    "jest-expo": "28.0.0",
+    "react-native-scripts": "1.14.0",
+    "react-test-renderer": "16.4.1"
   },
   "rnpm": {
     "assets": [
@@ -31,15 +31,15 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "expo": "^25.0.0",
-    "firebase": "^4.13.1",
-    "prop-types": "^15.6.1",
-    "react": "16.2.0",
-    "react-native": "0.52.0",
+    "expo": "^27.0.0",
+    "firebase": "^5.2.0",
+    "prop-types": "^15.6.2",
+    "react": "16.3.1",
+    "react-native": "^0.55.0",
     "react-native-svg-uri": "^1.2.3",
-    "react-navigation": "^1.5.4",
+    "react-navigation": "^2.6.2",
     "react-redux": "^5.0.7",
-    "redux": "^3.7.2",
+    "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
     "redux-thunk": "^2.2.0"
   }
