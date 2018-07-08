@@ -3,8 +3,8 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import SvgUri from 'react-native-svg-uri';
 
 import styles from './styles';
-import theme from '../../../../styles/theme';
-import svg from '../../../../assets/images/svg';
+import theme from '../../styles/theme';
+import svg from '../../assets/images/svg';
 
 const CreateAccount = () =>
 {

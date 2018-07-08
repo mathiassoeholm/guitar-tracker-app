@@ -1,14 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { connect } from 'react-redux';
 import SvgUri from 'react-native-svg-uri';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import theme from '../../../../styles/theme';
-import svg from '../../../../assets/images/svg';
-import authActions from '../../actions';
-import Button from '../../../../components/Button';
+import theme from '../../styles/theme';
+import svg from '../../assets/images/svg';
+import Button from '../Button';
 
 const Welcome = ({ navigate }) =>
 {
@@ -45,9 +43,4 @@ Welcome.propTypes =
   navigate: PropTypes.func,
 };
 
-const mapDispatchToProps = (dispatch) =>
-({
-  onClickedButton: () => dispatch(authActions.login('username', 'password')),
-});
-
-export default connect(null, mapDispatchToProps)(Welcome);
+export default Welcome;
