@@ -18,12 +18,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
 
-  createButton: {
-    margin: 10,
-  },
-
   signInButton: {
-    margin: 10,
     backgroundColor: theme.color.accent,
   },
 });

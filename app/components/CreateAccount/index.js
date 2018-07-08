@@ -20,9 +20,11 @@ const CreateAccount = () => (
       <Inputfield
         placeholder="E-mail"
       />
+      <Inputfield
+        placeholder="Password"
+      />
       <Button
         text="GO!"
-        style={styles.createButton}
         onPress={() => console.log('Go!')}
       />
     </View>

@@ -12,8 +12,10 @@ export default StyleSheet.create({
   textInput:
   {
     ...theme.roundedRectangle,
+    backgroundColor: theme.color.inputField,
     borderWidth: 2,
-    borderColor: 'black',
+    borderColor: theme.color.lightText,
     textAlign: 'center',
+    color: theme.color.lightText,
   },
 });

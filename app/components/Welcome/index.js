@@ -22,10 +22,12 @@ const Welcome = ({ navigation }) => (
     <View style={styles.buttonContainer}>
       <Button
         text="CREATE ACCOUNT"
-        style={styles.createButton}
         onPress={() => navigation.navigate('CreateAccount')}
       />
-      <Button text="LOGIN" style={styles.signInButton} />
+      <Button
+        text="LOGIN"
+        style={styles.signInButton}
+      />
     </View>
   </View>
 );

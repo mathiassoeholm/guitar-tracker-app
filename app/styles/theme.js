@@ -7,6 +7,7 @@ const color = {
   lightText: 'white',
   button: '#657fac',
   accent: '#e57957',
+  inputField: '#8297bc',
 };
 
 const fontSize = {
@@ -48,6 +49,7 @@ const roundedRectangle = {
   width: Math.min(380, windowWidth - 30),
   height: 60,
   justifyContent: 'center',
+  margin: 10,
 };
 
 export default {
