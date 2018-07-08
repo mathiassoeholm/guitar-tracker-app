@@ -1,32 +1,23 @@
 import { Platform, StatusBar } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
 import Welcome from '../../components/Welcome';
 import CreateAccount from '../../components/CreateAccount';
 
-const NavigationStack = StackNavigator(
+const NavigationStack = createStackNavigator(
+  {
+    Welcome,
+    Login: CreateAccount,
+    CreateAccount,
+  },
+  {
+    cardStyle:
     {
-        Welcome:
-        {
-            screen: Welcome
-		},
-		Login:
-        {
-            screen: CreateAccount
-        },
-		CreateAccount:
-        {
-            screen: CreateAccount
-        },
+      paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,
     },
-    {
-        cardStyle:
-        {
-            paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight
-        },
-		headerMode: 'none',
-		initialRouteName: 'Welcome'
-    }
+    headerMode: 'none',
+    initialRouteName: 'Welcome',
+  },
 );
 
 export default NavigationStack;

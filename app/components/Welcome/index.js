@@ -8,39 +8,41 @@ import theme from '../../styles/theme';
 import svg from '../../assets/images/svg';
 import Button from '../Button';
 
-const Welcome = ({ navigate }) =>
-{
-  // Calculate size of image
-  const minButtonContainerHeight = 300;
-  const titleStyle = StyleSheet.flatten(styles.title);
-  const imageSize = Math.min(
-    theme.windowWidth,
-    theme.windowHeight - (titleStyle.fontSize + titleStyle.paddingTop +  titleStyle.paddingBottom) - minButtonContainerHeight);
+// Calculate size of image
+const minButtonContainerHeight = 300;
+const titleStyle = StyleSheet.flatten(styles.title);
+const imageSize = Math.min(
+  theme.windowWidth,
+  theme.windowHeight
+    - (titleStyle.fontSize + titleStyle.paddingTop + titleStyle.paddingBottom)
+    - minButtonContainerHeight,
+);
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>
-      Guitar Tracker
-      </Text>
-      <SvgUri
-        width={(imageSize).toString()}
-        height={(imageSize).toString()}
-        svgXmlData={svg.guitar}
+const Welcome = ({ navigation }) => (
+  <View style={styles.container}>
+    <Text style={styles.title}>
+    Guitar Tracker
+    </Text>
+    <SvgUri
+      width={(imageSize).toString()}
+      height={(imageSize).toString()}
+      svgXmlData={svg.guitar}
+    />
+    <View style={styles.buttonContainer}>
+      <Button
+        text="CREATE ACCOUNT"
+        style={styles.createButton}
+        onPress={() => navigation.navigate('CreateAccount')}
       />
-      <View style={styles.buttonContainer}>
-        <Button
-          text="CREATE ACCOUNT"
-          style={styles.createButton}
-          onPress={() => console.log('heyhey')}
-        />
-        <Button text="LOGIN" style={styles.signInButton} />
-      </View>
-    </View>);
-};
+      <Button text="LOGIN" style={styles.signInButton} />
+    </View>
+  </View>
+);
 
-Welcome.propTypes =
-{
-  navigate: PropTypes.func,
+Welcome.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }).isRequired,
 };
 
 export default Welcome;

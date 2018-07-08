@@ -14,6 +14,8 @@ const mermaidFont = require('./app/assets/fonts/Mermaid.ttf');
 // Issue: https://github.com/facebook/react-native/issues/10991
 export default class App extends React.Component
 {
+  store = makeStore(firebaseBackend);
+
   state =
   {
     fontLoaded: false,
@@ -30,14 +32,14 @@ export default class App extends React.Component
     this.setState({ fontLoaded: true });
   }
 
-  store = makeStore(firebaseBackend);
-
   render()
   {
+    const { fontLoaded } = this.state;
+
     return (
       <Provider store={this.store}>
         <SafeAreaView style={theme.containerStyle}>
-          {this.state.fontLoaded && <NavigationStack />}
+          {fontLoaded && <NavigationStack />}
         </SafeAreaView>
       </Provider>
     );
