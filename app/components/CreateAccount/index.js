@@ -26,7 +26,7 @@ const CreateAccount = () =>
         <SvgUri
           width={(imageSize).toString()}
           height={(imageSize).toString()}
-          svgXmlData={svg.guitar}
+          svgXmlData={svg.electricGuitar}
         />
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button}>
