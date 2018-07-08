@@ -13,6 +13,7 @@
     "react/forbid-prop-types": "off",
     "arrow-parens": "off",
     "brace-style": ["error", "allman"],
-    "func-names": "off"
+    "func-names": "off",
+    "react/destructuring-assignment": "off"
 	}
 }

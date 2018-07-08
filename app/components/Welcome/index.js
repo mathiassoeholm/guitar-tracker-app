@@ -2,6 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
+import theme from '../../styles/theme';
 import styles from './styles';
 import svg from '../../assets/images/svg';
 import Button from '../Button';
@@ -12,7 +13,12 @@ const minButtonContainerHeight = 300;
 
 const Welcome = ({ navigation }) => (
   <View style={styles.container}>
-    <Header svgData={svg.guitar} minHeightForRest={minButtonContainerHeight} title="Guitar Tracker" />
+    <Header
+      svgData={svg.guitar}
+      minHeightForRest={minButtonContainerHeight}
+      title="Guitar Tracker"
+      titleColor={theme.color.darkText}
+    />
     <View style={styles.buttonContainer}>
       <Button
         text="CREATE ACCOUNT"

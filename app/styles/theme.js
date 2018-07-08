@@ -43,6 +43,13 @@ const containerStyle = {
   backgroundColor: color.lightBackground,
 };
 
+const roundedRectangle = {
+  borderRadius: 30,
+  width: Math.min(380, windowWidth - 30),
+  height: 60,
+  justifyContent: 'center',
+};
+
 export default {
   color,
   fontSize,
@@ -53,4 +60,5 @@ export default {
   windowHeight,
   titleStyle,
   containerStyle,
+  roundedRectangle,
 };

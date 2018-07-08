@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import theme from '../../styles/theme';
 import styles from './styles';
 
-const Header = ({ svgData, minHeightForRest, title }) => {
+const Header = ({ svgData, minHeightForRest, title, titleColor }) => {
   const titleStyle = StyleSheet.flatten(styles.title);
   const imageSize = Math.min(
     theme.windowWidth,
@@ -17,7 +17,7 @@ const Header = ({ svgData, minHeightForRest, title }) => {
 
   return (
     <View>
-      <Text style={styles.title}>
+      <Text style={[styles.title, { color: titleColor }]}>
         {title}
       </Text>
       <SvgUri
@@ -33,6 +33,7 @@ Header.propTypes = {
   svgData: PropTypes.string.isRequired,
   minHeightForRest: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  titleColor: PropTypes.string.isRequired,
 };
 
 export default Header;

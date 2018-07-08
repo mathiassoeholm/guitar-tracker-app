@@ -12,15 +12,13 @@ const Button = ({ style, text, onPress }) => (
   </TouchableOpacity>
 );
 
-Button.propTypes =
-{
+Button.propTypes = {
   style: PropTypes.number,
   text: PropTypes.string.isRequired,
   onPress: PropTypes.func,
 };
 
-Button.defaultProps =
-{
+Button.defaultProps = {
   style: 0,
   onPress: () => undefined,
 };
