@@ -1,33 +1,18 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import SvgUri from 'react-native-svg-uri';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import theme from '../../styles/theme';
 import svg from '../../assets/images/svg';
 import Button from '../Button';
+import Header from '../Header';
 
 // Calculate size of image
 const minButtonContainerHeight = 300;
-const titleStyle = StyleSheet.flatten(styles.title);
-const imageSize = Math.min(
-  theme.windowWidth,
-  theme.windowHeight
-    - (titleStyle.fontSize + titleStyle.paddingTop + titleStyle.paddingBottom)
-    - minButtonContainerHeight,
-);
 
 const Welcome = ({ navigation }) => (
   <View style={styles.container}>
-    <Text style={styles.title}>
-    Guitar Tracker
-    </Text>
-    <SvgUri
-      width={(imageSize).toString()}
-      height={(imageSize).toString()}
-      svgXmlData={svg.guitar}
-    />
+    <Header svgData={svg.guitar} minHeightForRest={minButtonContainerHeight} title="Guitar Tracker" />
     <View style={styles.buttonContainer}>
       <Button
         text="CREATE ACCOUNT"
