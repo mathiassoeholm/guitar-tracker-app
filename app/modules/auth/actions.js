@@ -16,7 +16,6 @@ const authActionsMaker = (backend) => ({
       type: t.LOG_IN,
     });
   },
-
 });
 
 export default authActionsMaker;

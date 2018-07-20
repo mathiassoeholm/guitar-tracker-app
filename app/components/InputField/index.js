@@ -17,10 +17,14 @@ const InputField = (props) => (
 InputField.propTypes = {
   placeholder: PropTypes.string.isRequired,
   onChangeText: PropTypes.func,
+  secureTextEntry: PropTypes.bool,
+  value: PropTypes.string,
 };
 
 InputField.defaultProps = {
   onChangeText: () => undefined,
+  secureTextEntry: false,
+  value: undefined,
 };
 
 export default InputField;

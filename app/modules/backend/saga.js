@@ -1,7 +1,7 @@
 import { all, takeLatest, put, call } from 'redux-saga/effects';
 
 import uiActionTypes from '../ui/action-types';
-import backendActions from '../backend/actions';
+import backendActions from './actions';
 
 const createUser = backend => function* (action)
 {

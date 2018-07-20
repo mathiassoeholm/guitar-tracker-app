@@ -6,7 +6,21 @@ const pressCreateUser = (email, password) =>
     value: { email, password },
   });
 
+const changeEmail = email =>
+  ({
+    type: t.CHANGE_EMAIL,
+    value: email,
+  });
+
+const changePassword = password =>
+  ({
+    type: t.CHANGE_PASSWORD,
+    value: password,
+  });
+
 export default
 {
   pressCreateUser,
+  changeEmail,
+  changePassword,
 };
