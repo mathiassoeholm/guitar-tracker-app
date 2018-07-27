@@ -5,7 +5,7 @@ const initialize = () =>
   firebase.initializeApp(config.firebase);
 
 const setAuthStateChangedListener = (listener) =>
-  firebase.auth().onAuthStateChanged((user) => listener(user));
+  firebase.auth().onAuthStateChanged(listener);
 
 const createUser = (email, password) =>
   firebase.auth().createUserWithEmailAndPassword(email, password);

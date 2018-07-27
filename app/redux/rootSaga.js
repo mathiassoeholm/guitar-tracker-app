@@ -2,10 +2,10 @@ import { all } from 'redux-saga/effects';
 
 import makeBackendSaga from '../modules/backend/saga';
 
-const makeRootSaga = backend => function* ()
+const makeRootSaga = (dispatch, backend) => function* ()
 {
   yield all([
-    makeBackendSaga(backend),
+    makeBackendSaga(dispatch, backend),
   ]);
 };
 

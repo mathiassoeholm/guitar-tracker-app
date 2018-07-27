@@ -13,7 +13,7 @@ const makeStore = backend =>
   const enhancer = compose(applyMiddleware(...middleware));
   const store = createStore(rootReducer, enhancer);
 
-  const rootSaga = makeRootSaga(backend);
+  const rootSaga = makeRootSaga(store.dispatch, backend);
   sagaMiddleware.run(rootSaga, store.dispatch);
 
   return store;

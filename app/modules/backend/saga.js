@@ -1,7 +1,25 @@
 import { all, takeLatest, put, call, select } from 'redux-saga/effects';
+import { NavigationActions } from 'react-navigation'
 
 import uiActionTypes from '../ui/action-types';
+import backendActionTypes from './action-types';
 import backendActions from './actions';
+
+const onChangeLoginStatus = function* (action)
+{
+  const loggedIn = action.value;
+
+  console.log("Login status: " + loggedIn);
+
+  if (loggedIn)
+  {
+    yield put(NavigationActions.navigate({ routeName: 'Timer' }));
+  }
+  else
+  {
+    yield put(NavigationActions.navigate({ routeName: 'Welcome' }));
+  }
+};
 
 const createUser = backend => function* ()
 {
@@ -48,7 +66,7 @@ const createUser = backend => function* ()
   }
 };
 
-function* makeSaga(backend)
+function* makeSaga(dispatch, backend)
 {
   backend.initialize();
 
@@ -57,6 +75,7 @@ function* makeSaga(backend)
 
   yield all([
     takeLatest(uiActionTypes.PRESS_CREATE_USER, createUser(backend)),
+    takeLatest(backendActionTypes.CHANGE_LOGIN_STATUS, onChangeLoginStatus),
   ]);
 }
 
