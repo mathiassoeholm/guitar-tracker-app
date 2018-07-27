@@ -1,9 +1,8 @@
 import t from './action-types';
 
-const pressCreateUser = (email, password) =>
+const pressCreateUser = () =>
   ({
     type: t.PRESS_CREATE_USER,
-    value: { email, password },
   });
 
 const changeEmail = email =>

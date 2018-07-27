@@ -8,6 +8,7 @@ const color = {
   button: '#657fac',
   accent: '#e57957',
   inputField: '#8297bc',
+  error: '#b52400',
 };
 
 const fontSize = {
